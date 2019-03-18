@@ -1,0 +1,8 @@
+.env
+dist/
+node_modules/
+config-mysql.json
+config-aws.json
+package-lock.json
+logs/
+Dockerfile

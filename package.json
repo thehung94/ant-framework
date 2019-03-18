@@ -1,0 +1,42 @@
+{
+  "name": "mx-store-authentication-api",
+  "version": "1.0.0",
+  "description": "MXStore Online Shop Template",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "build": "gulp default",
+    "start": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "hungvt@tima.vn",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.286.2",
+    "diacritic": "0.0.2",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.4",
+    "express-http-proxy": "^1.2.0",
+    "express-validator": "^5.3.0",
+    "gulp": "^4.0.0",
+    "gulp-typescript": "^5.0.0-alpha.3",
+    "morgan": "^1.9.0",
+    "mysql": "^2.16.0",
+    "request": "^2.87.0",
+    "request-promise-native": "^1.0.5",
+    "typescript": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/aws-sdk": "^2.7.0",
+    "@types/dotenv": "^4.0.3",
+    "@types/express": "^4.16.0",
+    "@types/express-validator": "^3.0.0",
+    "@types/morgan": "^1.7.35",
+    "@types/mysql": "^2.15.5",
+    "@types/request": "^2.47.1",
+    "@types/request-promise-native": "^1.0.15"
+  }
+}

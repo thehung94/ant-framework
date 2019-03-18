@@ -1,0 +1,14 @@
+{
+    "host": "",
+    "user": "",
+    "password": "",
+    "database": "",
+    "port": 3306,
+    "connectionLimit": 50,
+    "waitForConnections": true,
+    "debug": false,
+    "_maxListeners:": 100,
+    "connectTimeout": 10000,
+    "timeout": 10000,
+    "acquireTimeout": 10000
+}
