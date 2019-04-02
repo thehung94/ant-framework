@@ -3,6 +3,7 @@ import * as bodyParser from 'body-parser';
 import * as dotenv from 'dotenv';
 import * as logger from 'morgan';
 import * as path from 'path';
+import 'reflect-metadata';
 
 import AppConfiguration from './AppConfiguration';
 

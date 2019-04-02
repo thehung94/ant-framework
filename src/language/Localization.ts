@@ -1,7 +1,9 @@
 import EnMessage from './en/Message';
 import ViMessage from './vi/Message';
 import { AppCommon } from '../AppCommon';
+import { injectable } from 'inversify';
 
+@injectable()
 export class Localization {
     private _defaultMessageFile: string = 'Message';
 
@@ -46,7 +48,7 @@ export class Localization {
         
         if(params) {
             for(let p in params) {
-                let replace = "{"+p+"}";
+                let replace = "{" + p + "}";
                 while(result.indexOf(replace) >= 0){
                     result = result.replace(replace, params[p]);
                 }
