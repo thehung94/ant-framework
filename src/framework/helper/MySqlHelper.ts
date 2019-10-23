@@ -1,7 +1,5 @@
 import * as mysql from 'mysql';
 
-const MysqlConfig = require('../../../config-mysql.json'); 
-
 export class MySqlHelper {
     /**
      * Defines a MySql pool
@@ -12,7 +10,18 @@ export class MySqlHelper {
      * Allows to initialize a MySqlHelper object
      */
     constructor() {
-        this._pool = mysql.createPool(MysqlConfig);
+        this._pool = mysql.createPool({
+            "host": process.env.MYSQL_HOST,
+            "user": process.env.MYSQL_USER,
+            "password": process.env.MYSQL_PASSWORD,
+            "database": process.env.MYSQL_DATABASE,
+            "port": parseInt(process.env.MYSQL_PORT) || 3306,
+            "connectionLimit": parseInt(process.env.MYSQL_CONNECTION_LIMIT) || 50,
+            "waitForConnections": true,
+            "debug": false,
+            "connectTimeout": parseInt(process.env.MYSQL_CONNECTION_TIMEOUT) || 10000,
+            "acquireTimeout":  parseInt(process.env.MYSQL_CONNECTION_TIMEOUT) || 10000 
+        });
     }
     
     /**
